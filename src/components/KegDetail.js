@@ -12,7 +12,7 @@ function KegDetail(props){
       <p>Price ${keg.price}</p>
       <p>ABV: {keg.alcohol}</p>
       <p>Pints Remaining: {keg.pints}</p>
-      <button onClick= {() => removePint(keg.id)}>Pint Served</button>
+      { keg.pints > 0 ? <button onClick= {props.removePint}>Pint Served</button> : null}
       <hr/>
     </React.Fragment>
   );
