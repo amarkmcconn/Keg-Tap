@@ -1,6 +1,7 @@
 import React from 'react';
 import NewKegForm from './NewKegForm';
 import KegList from './KegList';
+import KegDetail from './KegDetail';
 
 class KegControl extends React.Component {
 
@@ -8,15 +9,23 @@ class KegControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      mainKegList: []
+      mainKegList: [],
+      selectedKeg: null
     };
     this.handleClick = this.handleClick.bind(this); 
   }
 
-  handleClick() {
-    this.setState(prevState => ({
-      formVisibleOnPage: !prevState.formVisibleOnPage
-    }));
+  handleClick = () => {
+    if (this.state.selectedKeg != null) {
+      this.setState({
+        formVisibleOnPage: false,
+        selectedKeg: null
+      });
+    } else {
+      this.setState(prevState => ({
+        formVisibleOnPage: !prevState.formVisibleOnPage,
+      }));
+    }
   }
 
   handleAddingNewKegToList = (newKeg) => {
@@ -25,15 +34,24 @@ class KegControl extends React.Component {
                   formVisibleOnPage: false });
   }
 
+  handleChangingSelectedKeg = (id) => {
+    const selectedKeg = this.state.mainKegList.filter(keg => keg.id === id)[0];
+    this.setState({selectedKeg: selectedKeg});
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null; 
-    if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />;
-      buttonText = "Return to Keg List"; 
+    if (this.state.selectedKeg != null) {
+      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} />
+      buttonText = "Return to Keg List";
+    }
+    else if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList}  />;
+      buttonText = "Return to Keg List";
     } else {
-      currentlyVisibleState = <KegList kegList={this.state.mainKegList} />;
-      buttonText = "Add Keg"; 
+      currentlyVisibleState = <KegList kegList={this.state.mainKegList} onKegSelection={this.handleChangingSelectedKeg} />;
+      buttonText = "Add Keg";
     }
     return (
       <React.Fragment>

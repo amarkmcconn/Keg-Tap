@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 function Keg(props){
   return (
     <React.Fragment>
-      <h3>Beer: {props.name}</h3>
-      <ul>
-        <li>Brewery: {props.brand}</li>
-        <li>Price ${props.price}</li>
-        <li>ABV: {props.alcohol}</li>
-      </ul>
-      <hr/>
+      <div onClick = {() => props.whenKegClicked(props.id)}>
+        <h3>Beer: {props.name}</h3>
+        <p>Brewery: {props.brand}</p>
+        <p>Price ${props.price}</p>
+        <p>ABV: {props.alcohol}</p>
+        <hr/>
+      </div>
     </React.Fragment>
   );
 }
@@ -19,7 +19,9 @@ Keg.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  alcohol: PropTypes.string.isRequired
+  alcohol: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  whenKegClicked: PropTypes.func
 };
 
 export default Keg;
