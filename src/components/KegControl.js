@@ -38,6 +38,10 @@ class KegControl extends React.Component {
     this.setState({selectedKeg: selectedKeg});
   }
 
+  handleRemovePint = (id) => {
+    
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null; 
