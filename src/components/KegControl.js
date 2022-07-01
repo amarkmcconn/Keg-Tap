@@ -12,7 +12,6 @@ class KegControl extends React.Component {
       mainKegList: [],
       selectedKeg: null
     };
-    this.handleClick = this.handleClick.bind(this); 
   }
 
   handleClick = () => {
