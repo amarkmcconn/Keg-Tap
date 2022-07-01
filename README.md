@@ -6,10 +6,10 @@
 
 ## 🖥️ Technologies Used
 
-* React
-* JavaScript
-* HTML
-* CSS
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" width="60" height="60"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" width="60" height="60"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" width="60" height="60"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" width="60" height="60"/>
 
 ## ✅ Description
 
@@ -22,7 +22,10 @@ This a beer tap room React application that allows the owner to keep track of ho
 * As a user, I want to see how many pints are left in a keg. Hint: A full keg has roughly 124 pints.
 * As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0
 
+## 📈 Application Diagram
+
 ![alt text](/src/img/Picture1.png)
+
 ## ⚙️Setup/Installation Requirements
 
 Clone this repository: <https://github.com/amarkmcconn/Keg-Tap>
@@ -60,4 +63,4 @@ In the project directory `Keg-tap`, you can run:
 
 _If you run into any issues or have questions, ideas, or concerns;  please email me: at mark.programming1@gmail.com or make a contribution to the code._
 
-Copyright (c) 2022 Mark McConnell
+Copyright (c) 2022 Mark McConnell 🍻
