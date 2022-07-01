@@ -4,14 +4,12 @@ body{
 }
 
 .form-box{
-  min-width: 50%;
+  min-width: 35%;
   height: 18vh;
   border: 35px solid rgb(250, 246, 246);
-  margin: 5vw;
+  margin: 1vw;
   padding: 5vw;
   background-color: rgb(124, 100, 39);
-
-
   position:relative; 
 }
 
@@ -43,4 +41,11 @@ body{
   justify-content: center;
   align-items: center;
   margin: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 10rem 10rem 10rem;
+  grid-gap: 1rem;
+  grid-auto-flow: row;
 }
