@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import tapRoom from "./../img/tap.png"
+import tapRoom from "./../img/logo.png"
 import tapRoom1 from './../img/Image3.jpg'
 
 function Header(){
