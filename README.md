@@ -1,8 +1,8 @@
 # _![alt text](/src/img/logo.png)_
 
-#### By _Mark McConnell_
+## By _Mark McConnell_
 
-#### _This a beer tap room React application that allows the owner to keep track of how many pints they have left in their kegs_
+### _This a beer tap room React application that allows the owner to keep track of how many pints they have left in their kegs_
 
 ## 🖥️ Technologies Used
 
